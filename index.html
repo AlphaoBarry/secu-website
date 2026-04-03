@@ -3,46 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIA Security</title>
-    <!-- Tailwind CSS Script for running directly in the browser -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>SIA Security | Elite Protection</title>
+    <meta name="description" content="Professional security services including Close Protection, Corporate Security, Event Security, and Mobile Patrols.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <section class="relative bg-slate-950 py-24 px-6 overflow-hidden min-h-screen grid content-center">
-        <!-- Subtle Grid Background -->
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+    <header class="navbar">
+        <div class="logo">SIA<span>SECURITY</span></div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#request">Request Service</a>
+        </nav>
+    </header>
 
-        <div class="max-w-6xl mx-auto relative z-10 w-full">
-            <div class="inline-flex items-center space-x-2 bg-blue-900/30 border border-blue-500/50 px-3 py-1 rounded-full mb-6">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                </span>
-                <span class="text-blue-200 text-xs font-bold uppercase tracking-widest">SIA Approved Contractor</span>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="badge">
+                    <span class="pulse"></span>
+                    SIA Approved Contractor
+                </div>
+                <h1>Elite Protection for <br><span>High-Stakes Environments</span></h1>
+                <p>Providing fully vetted, SIA-licensed security operatives across the UK. From corporate concierge to close protection, we safeguard your assets with uncompromising standards.</p>
+                <div class="cta-group">
+                    <a href="#request" class="btn btn-primary">Request an Operational Audit</a>
+                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                </div>
             </div>
+        </section>
 
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-                Elite Protection for <br />
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                    High-Stakes Environments
-                </span>
-            </h1>
+        <section id="services" class="services">
+            <h2>Specialized Services</h2>
+            <div class="service-grid">
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Close Protection</h3>
+                    <p>Discreet, dedicated security personnel for VIPs and high-net-worth individuals ensuring safety without compromising lifestyle.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏢</div>
+                    <h3>Corporate Security</h3>
+                    <p>Front-of-house concierge and behind-the-scenes surveillance to keep your workplace secure and operations seamless.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎫</div>
+                    <h3>Event Security</h3>
+                    <p>From private corporate gatherings to large-scale public events, our crowd-control experts ensure safe environments.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚔</div>
+                    <h3>Mobile Patrols</h3>
+                    <p>Responsive, unpredictable patrol routines deterrence and rapid response to any on-site incidents 24/7.</p>
+                </div>
+            </div>
+        </section>
 
-            <p class="text-lg text-slate-400 max-w-2xl mb-10 leading-relaxed">
-                Providing fully vetted, SIA-licensed security operatives across the UK.
-                From corporate concierge to close protection, we safeguard your assets with
-                uncompromising standards.
-            </p>
+        <section id="request" class="request-form-section">
+            <div class="form-container">
+                <h2>Request Security Services</h2>
+                <p>Contact our operations team to discuss your security requirements and receive a tailored deployment plan.</p>
+                <form class="secure-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="E.g., John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Corporate Email</label>
+                        <input type="email" id="email" placeholder="john@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service-type">Required Service</label>
+                        <select id="service-type" required>
+                            <option value="">Select a service</option>
+                            <option value="close">Close Protection</option>
+                            <option value="corporate">Corporate Security</option>
+                            <option value="event">Event Security</option>
+                            <option value="patrol">Mobile Patrols</option>
+                            <option value="other">Other / Custom</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="details">Deployment Details</label>
+                        <textarea id="details" rows="4" placeholder="Please provide location, duration, and specific threats or requirements..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Submit Request</button>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+        </section>
+    </main>
 
-            <div class="flex flex-col sm:flex-row gap-4">
-                <button class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-md font-bold transition-all shadow-lg shadow-blue-900/20">
-                    Request an Operational Audit
-                </button>
-                <button class="bg-transparent border border-slate-700 hover:border-slate-500 text-white px-8 py-4 rounded-md font-bold transition-all">
-                    Our Services
-                </button>
+    <footer>
+        <div class="footer-content">
+            <div class="logo">SIA<span>SECURITY</span></div>
+            <p>&copy; 2026 SIA Security Solutions Ltd. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
             </div>
         </div>
-    </section>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const msg = document.getElementById('form-message');
+            msg.innerHTML = "Request received successfully. Our team will contact you within 2 hours.";
+            msg.classList.add('success');
+            setTimeout(() => { msg.innerHTML = ''; msg.classList.remove('success'); this.reset(); }, 4000);
+        });
+    </script>
 </body>
 </html>
