@@ -97,18 +97,21 @@
                 <h2>Request Security Services</h2>
                 <p>Contact our operations team to discuss your security requirements and receive a tailored deployment
                     plan.</p>
-                <form class="secure-form" id="contact-form">
+                <form class="secure-form" id="contact-form" action="https://formsubmit.co/abaryy706@gmail.com" method="POST">
+                    <!-- Security layer: prevents spam and redirects smoothly -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New Security Request from Vanahive">
                     <div class="form-group">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" placeholder="E.g., John Doe" required>
+                        <input type="text" id="name" name="name" placeholder="E.g., John Doe" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Corporate Email</label>
-                        <input type="email" id="email" placeholder="john@company.com" required>
+                        <input type="email" id="email" name="email" placeholder="john@company.com" required>
                     </div>
                     <div class="form-group">
                         <label for="service-type">Required Service</label>
-                        <select id="service-type" required>
+                        <select id="service-type" name="service" required>
                             <option value="">Select a service</option>
                             <option value="close">Close Protection</option>
                             <option value="corporate">Corporate Security</option>
@@ -119,7 +122,7 @@
                     </div>
                     <div class="form-group full-width">
                         <label for="details">Deployment Details</label>
-                        <textarea id="details" rows="4"
+                        <textarea id="details" name="details" rows="4"
                             placeholder="Please provide location, duration, and specific threats or requirements..."
                             required></textarea>
                     </div>
