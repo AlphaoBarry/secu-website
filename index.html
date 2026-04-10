@@ -145,15 +145,7 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const msg = document.getElementById('form-message');
-            msg.innerHTML = "Request received successfully. Our team will contact you within 2 hours.";
-            msg.classList.add('success');
-            setTimeout(() => { msg.innerHTML = ''; msg.classList.remove('success'); this.reset(); }, 4000);
-        });
-    </script>
+    <!-- The contact form will now naturally send the data to FormSubmit without Javascript interference -->
 </body>
 
 </html>
